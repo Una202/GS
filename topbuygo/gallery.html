@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Topbuygo Photo Gallery</title>
   <style>
     body {
       font-family: sans-serif;
-      text-align: center;
+      text-align: left; /* 整体内容靠左 */
       padding: 20px;
     }
-    img {
-      margin: 10px;
+    /* 容器支持换行，靠左对齐 */
+    .image-container {
+      display: flex;
+      flex-wrap: wrap; /* 换行 */
+      justify-content: flex-start; /* 靠左 */
+      gap: 10px; /* 图片间距 */
+      max-width: 940px; /* 控制最大宽度，适合10张90px图片+间距 */
+    }
+    .image-container img {
       border: 1px solid #ccc;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      max-width: 90%;
+      width: 90px; /* 每张图片固定宽度 */
       height: auto;
+      flex-shrink: 0; /* 防止压缩 */
     }
   </style>
 </head>
 <body>
   <h1>Topbuygo Photo Gallery</h1>
 
-  <!-- 你的图片链接 -->
-  <img src="https://raw.githubusercontent.com/Una202/GS/main/topbuygo/image/1688.png" width="300" alt="1688">
-  <img src="https://raw.githubusercontent.com/Una202/GS/main/topbuygo/image/jingdong.png" width="300" alt="jingdong">
-  <img src="https://raw.githubusercontent.com/Una202/GS/main/topbuygo/image/logo2.png" width="300" alt="logo2">
-  <img src="https://raw.githubusercontent.com/Una202/GS/main/topbuygo/image/taobao.png" width="300" alt="taobao">
-  <img src="https://raw.githubusercontent.com/Una202/GS/main/topbuygo/image/xianyu.png" width="300" alt="xianyu">
-  <img src="https://raw.githubusercontent.com/Una202/GS/main/topbuygo/image/logo1.png" width="300" alt="logo2">
+  <div class="image-container">
+    <img src="https://raw.githubusercontent.com/Una202/GS/main/topbuygo/image/1688.png" alt="1688" />
+    <img src="https://raw.githubusercontent.com/Una202/GS/main/topbuygo/image/jingdong.png" alt="jingdong" />
+    <img src="https://raw.githubusercontent.com/Una202/GS/main/topbuygo/image/logo2.png" alt="logo2" />
+    <img src="https://raw.githubusercontent.com/Una202/GS/main/topbuygo/image/taobao.png" alt="taobao" />
+    <img src="https://raw.githubusercontent.com/Una202/GS/main/topbuygo/image/xianyu.png" alt="xianyu" />
+    <img src="https://raw.githubusercontent.com/Una202/GS/main/topbuygo/image/logo1.png" alt="logo1" />
+    <img src="https://raw.githubusercontent.com/Una202/GS/main/topbuygo/image/1688.png" alt="1688-2" />
+    <img src="https://raw.githubusercontent.com/Una202/GS/main/topbuygo/image/jingdong.png" alt="jingdong-2" />
+    <img src="https://raw.githubusercontent.com/Una202/GS/main/topbuygo/image/logo2.png" alt="logo2-2" />
+    <img src="https://raw.githubusercontent.com/Una202/GS/main/topbuygo/image/taobao.png" alt="taobao-2" />
+    <!-- 超过10张，自动换行 -->
+    <img src="https://raw.githubusercontent.com/Una202/GS/main/topbuygo/image/xianyu.png" alt="xianyu-2" />
+    <img src="https://raw.githubusercontent.com/Una202/GS/main/topbuygo/image/logo1.png" alt="logo1-2" />
+  </div>
 </body>
 </html>
